@@ -2,10 +2,13 @@ import numpy as np
 import pandas as pd
 import matplotlib.pylab as plot
 
+
 from leitorCSV import carregar_csv_para_dicionario
 
 nomes = ['Temperatura', 'Energia(Gcal/h)', 'Alimentação(T/h)']
-dados_extraidos = carregar_csv_para_dicionario("dadosFinais.csv", nomes)
+
+caminho = "data/dadosFinais.csv"
+dados_extraidos = carregar_csv_para_dicionario(caminho, nomes)
 
 X = list(dados_extraidos.values())
 temp_atual = dados_extraidos["Temperatura"]

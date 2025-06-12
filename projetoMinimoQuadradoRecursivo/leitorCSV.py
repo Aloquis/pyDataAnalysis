@@ -14,6 +14,8 @@ def carregar_csv_para_dicionario(caminho_arquivo_csv: str, lista_nomes_colunas_d
 
             if not dados_extraidos:
                 print(f"Nenhuma coluna em {lista_nomes_colunas_desejadas} foi encontrada no arquivo CSV")
+        
+        return dados_extraidos
 
     
     except FileNotFoundError:
@@ -22,4 +24,4 @@ def carregar_csv_para_dicionario(caminho_arquivo_csv: str, lista_nomes_colunas_d
         print(f"Ocorreu um erro ao processar o arquivo CSV: {e}")
         return {}
     
-    return dados_extraidos
+    
